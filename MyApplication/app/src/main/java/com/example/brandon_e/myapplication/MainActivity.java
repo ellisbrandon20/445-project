@@ -1,5 +1,7 @@
 package com.example.brandon_e.myapplication;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "This is a magic log message!");
 
                 // Toast gives a little pop up message would not be sufficiant for the applicaiton but could be used until we figure out a better pop up
-                Toast.makeText(getApplicationContext(), "This is Toast Magic", Toast.LENGTH_SHORT)
+                Toast.makeText(getApplicationContext(), "Click on Animal to learn the Name", Toast.LENGTH_SHORT)
                         .show();
 
                 // set media type to "text"
@@ -49,8 +51,34 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     // Toast gives a little pop up message would not be sufficiant for the applicaiton but could be used until we figure out a better pop up
-                    Toast.makeText(getApplicationContext(), "Image_1", Toast.LENGTH_SHORT)
-                            .show();
+//                    Toast.makeText(getApplicationContext(), "Image_1", Toast.LENGTH_SHORT)
+//                            .show();
+
+                    AlertDialog.Builder a_builder = new AlertDialog.Builder(MainActivity.this);
+                    a_builder.setMessage("Image_1")
+                        .setCancelable(true)
+//                            .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    finish();
+//                                }
+//                            })
+//                            .setNegativeButton("No",new DialogInterface.OnClickListener() {
+//                                @Override
+//                                public void onClick(DialogInterface dialog, int which) {
+//                                    dialog.cancel();
+//                                }
+//                            }) ;
+                        .setPositiveButton("Ok",new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                }) ;
+                    AlertDialog alert = a_builder.create();
+                    alert.setTitle("Animal Text:");
+                    alert.show();
+
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Poopy", Toast.LENGTH_SHORT)
