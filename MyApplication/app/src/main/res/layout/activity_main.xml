@@ -26,11 +26,12 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_launcher"
-        android:layout_marginTop="69dp"
-        android:id="@+id/imageButton_1"
+        app:srcCompat="@drawable/dog"
+        android:id="@+id/dog_button"
+        android:background="@null"
         android:layout_below="@+id/textButton"
-        android:layout_alignLeft="@+id/textButton"
-        android:layout_alignStart="@+id/textButton" />
+        android:layout_alignRight="@+id/textButton"
+        android:layout_alignEnd="@+id/textButton"
+        android:layout_marginTop="49dp" />
 
 </RelativeLayout>

@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        ImageButton imageBtn_1 = (ImageButton) findViewById(R.id.imageButton_1);
+        ImageButton imageBtn_1 = (ImageButton) findViewById(R.id.dog_button);
         imageBtn_1.setOnClickListener(new View.OnClickListener()  {
             @Override
             public void onClick(View v) {
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 //                            .show();
 
                     AlertDialog.Builder a_builder = new AlertDialog.Builder(MainActivity.this);
-                    a_builder.setMessage("Image_1")
+                    a_builder.setMessage("Dog!")
                         .setCancelable(true)
 //                            .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
 //                                @Override
