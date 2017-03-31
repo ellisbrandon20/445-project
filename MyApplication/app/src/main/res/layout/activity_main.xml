@@ -11,27 +11,203 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.brandon_e.myapplication.MainActivity">
 
-    <Button
-        android:text="Text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="16dp"
-        android:id="@+id/textButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/dog"
         android:id="@+id/dog_button"
         android:background="@null"
+        android:layout_marginTop="50dp"
         android:layout_below="@+id/textButton"
-        android:layout_alignRight="@+id/textButton"
-        android:layout_alignEnd="@+id/textButton"
-        android:layout_marginTop="49dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bear"
+        android:id="@+id/bear_button"
+        android:background="@null"
+        android:layout_alignTop="@+id/dog_button"
+        android:layout_toRightOf="@+id/dog_button"
+        android:layout_toEndOf="@+id/dog_button" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/horse"
+        android:id="@+id/horse_button"
+        android:background="@null"
+        android:layout_alignTop="@+id/bear_button"
+        android:layout_toRightOf="@+id/bear_button"
+        android:layout_toEndOf="@+id/bear_button" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cat"
+        android:layout_below="@+id/dog_button"
+        android:layout_toLeftOf="@+id/bear_button"
+        android:layout_toStartOf="@+id/bear_button"
+        android:layout_marginTop="11dp"
+        android:id="@+id/cat_button"
+        android:background="@null" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/bird"
+        android:id="@+id/bird_button"
+        android:background="@null"
+        android:layout_alignTop="@+id/horse_button"
+        android:layout_toRightOf="@+id/horse_button"
+        android:layout_toEndOf="@+id/horse_button" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/chicken"
+        android:id="@+id/chicken_button"
+        android:background="@null"
+        android:layout_alignTop="@+id/cat_button"
+        android:layout_toRightOf="@+id/cat_button"
+        android:layout_toEndOf="@+id/cat_button" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/frog"
+        android:layout_alignBottom="@+id/chicken_button"
+        android:layout_toRightOf="@+id/chicken_button"
+        android:layout_toEndOf="@+id/chicken_button"
+        android:id="@+id/frog_button"
+        android:background="@null"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/cow"
+        android:layout_alignTop="@+id/frog_button"
+        android:layout_toRightOf="@+id/frog_button"
+        android:layout_toEndOf="@+id/frog_button"
+        android:id="@+id/cow_button"
+        android:background="@null" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/elephant"
+        android:layout_below="@+id/cat_button"
+        android:layout_alignLeft="@+id/cat_button"
+        android:layout_alignStart="@+id/cat_button"
+        android:layout_marginTop="19dp"
+        android:id="@+id/elephant_button"
+        android:background="@null" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/lion"
+        android:id="@+id/lion_button"
+        android:background="@null"
+        android:layout_alignTop="@+id/elephant_button"
+        android:layout_toRightOf="@+id/elephant_button"
+        android:layout_toEndOf="@+id/elephant_button" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pig"
+        android:background="@null"
+        android:id="@+id/pig_button"
+        android:layout_alignTop="@+id/lion_button"
+        android:layout_toRightOf="@+id/lion_button"
+        android:layout_toEndOf="@+id/lion_button" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/monkey"
+        android:layout_alignTop="@+id/pig_button"
+        android:layout_alignRight="@+id/cow_button"
+        android:layout_alignEnd="@+id/cow_button"
+        android:id="@+id/monkey_button"
+        android:background="@null"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/snake"
+        android:layout_below="@+id/elephant_button"
+        android:layout_toLeftOf="@+id/lion_button"
+        android:layout_toStartOf="@+id/lion_button"
+        android:layout_marginTop="13dp"
+        android:id="@+id/snake_button"
+        android:background="@null"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/duck"
+        android:layout_alignTop="@+id/snake_button"
+        android:layout_toLeftOf="@+id/pig_button"
+        android:layout_toStartOf="@+id/pig_button"
+        android:id="@+id/duck_button"
+        android:background="@null"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/penguin"
+        android:layout_alignTop="@+id/duck_button"
+        android:layout_toLeftOf="@+id/monkey_button"
+        android:layout_toStartOf="@+id/monkey_button"
+        android:id="@+id/penguin_button"
+        android:background="@null"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/fish"
+        android:layout_alignTop="@+id/penguin_button"
+        android:layout_alignRight="@+id/monkey_button"
+        android:layout_alignEnd="@+id/monkey_button"
+        android:id="@+id/fish_button"
+        android:background="@null"/>
+
+    <Button
+        android:text="Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/dog_button"
+        android:layout_alignStart="@+id/dog_button" />
+
+    <Button
+        android:text="Video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoButton"
+        android:layout_alignBaseline="@+id/textButton"
+        android:layout_alignBottom="@+id/textButton"
+        android:layout_toRightOf="@+id/textButton"
+        android:layout_toEndOf="@+id/textButton"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <Button
+        android:text="Sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/soundButton"
+        android:layout_alignBaseline="@+id/videoButton"
+        android:layout_alignBottom="@+id/videoButton"
+        android:layout_toRightOf="@+id/horse_button"
+        android:layout_toEndOf="@+id/horse_button" />
+
 
 </RelativeLayout>
