@@ -1,19 +1,29 @@
 package com.example.brandon_e.myapplication;
 
+import android.app.Dialog;
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "DemoInitialApp";
     public static String media = "none";
+
+    private MediaPlayer mp = new MediaPlayer();
+    private VideoView myVideoView;
 
 
     public static String getMedia() {
@@ -46,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         alert.show();
     }
     //======================================================================
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +127,31 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Dog");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+
+                    // Change the URI argument depending on what animal is selected
+                    // String path1 = "https://www.w3schools.com/html/mov_bbb.mp4";
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.dog);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+                }
+                else if(getMedia().equals("sound")) {
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.cow_sound);
+                    mp.start();
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -130,6 +166,29 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Bear");
+                }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.bear);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.cow_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -146,6 +205,28 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Horse");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.horse);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -160,6 +241,26 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Bird");
+                }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.bird);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+                }
+                else if(getMedia().equals("sound")) {
+
                 }
                 else{
                     mediumErrorMsg();
@@ -176,6 +277,27 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Cat");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.cat);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+                }
+                else if(getMedia().equals("sound")) {
+
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -190,6 +312,29 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Chicken");
+                }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.chicken);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
+
                 }
                 else{
                     mediumErrorMsg();
@@ -206,6 +351,28 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Frog");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.frog);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -220,6 +387,29 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Cow");
+                }
+                else if (getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.cow);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.cow_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -236,6 +426,28 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Elephant");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.elephant);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -250,6 +462,28 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Lion");
+                }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.lion);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
                 }
                 else{
                     mediumErrorMsg();
@@ -266,6 +500,28 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Pig");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.pig);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -280,6 +536,28 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Monkey");
+                }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.monkey);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
                 }
                 else{
                     mediumErrorMsg();
@@ -296,6 +574,28 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Snake");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.snake);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -310,6 +610,26 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Duck");
+                }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.duck);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+                }
+                else if(getMedia().equals("sound")) {
+
                 }
                 else{
                     mediumErrorMsg();
@@ -326,6 +646,28 @@ public class MainActivity extends AppCompatActivity {
                 if(getMedia().equals("text")){
                     createTextAlert("Penguin");
                 }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.penguin);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+
+                }
+                else if(getMedia().equals("sound")) {
+
+                }
                 else{
                     mediumErrorMsg();
                 }
@@ -340,6 +682,27 @@ public class MainActivity extends AppCompatActivity {
 
                 if(getMedia().equals("text")){
                     createTextAlert("Fish");
+                }
+                else if(getMedia().equals("video")) {
+                    //============Stuff that does the popup dialog for the window============//
+                    final Dialog dialog = new Dialog(MainActivity.this);
+                    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                    dialog.setContentView(R.layout.video_view);
+                    dialog.show();
+                    WindowManager.LayoutParams lp = new WindowManager.LayoutParams(
+                            ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+                    lp.copyFrom(dialog.getWindow().getAttributes());
+                    dialog.getWindow().setAttributes(lp);
+                    VideoView videoview = (VideoView) dialog.findViewById(R.id.videoView2);
+                    //=======================================================================//
+                    Uri uri = Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.fish);
+                    // Uri uri2 = Uri.parse(path1);
+                    videoview.setVideoURI(uri);
+                    videoview.start();
+
+                }
+                else if(getMedia().equals("sound")) {
+
                 }
                 else{
                     mediumErrorMsg();

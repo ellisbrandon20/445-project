@@ -11,6 +11,30 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.brandon_e.myapplication.MainActivity">
 
+
+    <Button
+        android:text="Video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/videoButton"
+        android:layout_alignBaseline="@+id/textButton"
+        android:layout_alignBottom="@+id/textButton"
+        android:layout_toRightOf="@+id/textButton"
+        android:layout_toEndOf="@+id/textButton"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
+
+    <Button
+        android:text="Sound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/soundButton"
+        android:layout_alignBaseline="@+id/videoButton"
+        android:layout_alignBottom="@+id/videoButton"
+        android:layout_toRightOf="@+id/horse_button"
+        android:layout_toEndOf="@+id/horse_button" />
+
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -187,27 +211,16 @@
         android:layout_alignLeft="@+id/dog_button"
         android:layout_alignStart="@+id/dog_button" />
 
-    <Button
-        android:text="Video"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/videoButton"
-        android:layout_alignBaseline="@+id/textButton"
-        android:layout_alignBottom="@+id/textButton"
-        android:layout_toRightOf="@+id/textButton"
-        android:layout_toEndOf="@+id/textButton"
-        android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp" />
 
-    <Button
-        android:text="Sound"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/soundButton"
-        android:layout_alignBaseline="@+id/videoButton"
-        android:layout_alignBottom="@+id/videoButton"
-        android:layout_toRightOf="@+id/horse_button"
-        android:layout_toEndOf="@+id/horse_button" />
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        />
 
 
 </RelativeLayout>
