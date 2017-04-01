@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/z"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -13,214 +13,220 @@
 
 
     <Button
-        android:text="Video"
+        android:id="@+id/videoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/videoButton"
         android:layout_alignBaseline="@+id/textButton"
         android:layout_alignBottom="@+id/textButton"
-        android:layout_toRightOf="@+id/textButton"
-        android:layout_toEndOf="@+id/textButton"
         android:layout_marginLeft="17dp"
-        android:layout_marginStart="17dp" />
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/textButton"
+        android:layout_toRightOf="@+id/textButton"
+        android:text="Video" />
 
     <Button
-        android:text="Sound"
+        android:id="@+id/soundButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/soundButton"
         android:layout_alignBaseline="@+id/videoButton"
         android:layout_alignBottom="@+id/videoButton"
+        android:layout_toEndOf="@+id/horse_button"
         android:layout_toRightOf="@+id/horse_button"
-        android:layout_toEndOf="@+id/horse_button" />
+        android:text="Sound" />
 
 
     <ImageButton
+        android:id="@+id/dog_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/dog"
-        android:id="@+id/dog_button"
-        android:background="@null"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/textButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/textButton"
         android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@null"
+        app:srcCompat="@drawable/dog" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bear"
         android:id="@+id/bear_button"
-        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/dog_button"
+        android:layout_toEndOf="@+id/dog_button"
         android:layout_toRightOf="@+id/dog_button"
-        android:layout_toEndOf="@+id/dog_button" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/horse"
-        android:id="@+id/horse_button"
         android:background="@null"
-        android:layout_alignTop="@+id/bear_button"
-        android:layout_toRightOf="@+id/bear_button"
-        android:layout_toEndOf="@+id/bear_button" />
+        app:srcCompat="@drawable/bear" />
 
     <ImageButton
+        android:id="@+id/horse_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cat"
+        android:layout_alignTop="@+id/bear_button"
+        android:layout_toEndOf="@+id/bear_button"
+        android:layout_toRightOf="@+id/bear_button"
+        android:background="@null"
+        app:srcCompat="@drawable/horse" />
+
+    <ImageButton
+        android:id="@+id/cat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/dog_button"
+        android:layout_marginTop="11dp"
         android:layout_toLeftOf="@+id/bear_button"
         android:layout_toStartOf="@+id/bear_button"
-        android:layout_marginTop="11dp"
-        android:id="@+id/cat_button"
-        android:background="@null" />
+        android:background="@null"
+        app:srcCompat="@drawable/cat" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bird"
         android:id="@+id/bird_button"
-        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/horse_button"
+        android:layout_toEndOf="@+id/horse_button"
         android:layout_toRightOf="@+id/horse_button"
-        android:layout_toEndOf="@+id/horse_button" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/chicken"
-        android:id="@+id/chicken_button"
         android:background="@null"
+        app:srcCompat="@drawable/bird" />
+
+    <ImageButton
+        android:id="@+id/chicken_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/cat_button"
+        android:layout_toEndOf="@+id/cat_button"
         android:layout_toRightOf="@+id/cat_button"
-        android:layout_toEndOf="@+id/cat_button" />
+        android:background="@null"
+        app:srcCompat="@drawable/chicken" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/frog"
-        android:layout_alignBottom="@+id/chicken_button"
-        android:layout_toRightOf="@+id/chicken_button"
-        android:layout_toEndOf="@+id/chicken_button"
         android:id="@+id/frog_button"
-        android:background="@null"/>
-
-    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/cow"
-        android:layout_alignTop="@+id/frog_button"
-        android:layout_toRightOf="@+id/frog_button"
-        android:layout_toEndOf="@+id/frog_button"
+        android:layout_alignBottom="@+id/chicken_button"
+        android:layout_toEndOf="@+id/chicken_button"
+        android:layout_toRightOf="@+id/chicken_button"
+        android:background="@null"
+        app:srcCompat="@drawable/frog" />
+
+    <ImageButton
         android:id="@+id/cow_button"
-        android:background="@null" />
-
-    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/elephant"
-        android:layout_below="@+id/cat_button"
+        android:layout_alignTop="@+id/frog_button"
+        android:layout_toEndOf="@+id/frog_button"
+        android:layout_toRightOf="@+id/frog_button"
+        android:background="@null"
+        app:srcCompat="@drawable/cow" />
+
+    <ImageButton
+        android:id="@+id/elephant_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/cat_button"
         android:layout_alignStart="@+id/cat_button"
+        android:layout_below="@+id/cat_button"
         android:layout_marginTop="19dp"
-        android:id="@+id/elephant_button"
-        android:background="@null" />
+        android:background="@null"
+        app:srcCompat="@drawable/elephant" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/lion"
         android:id="@+id/lion_button"
-        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/elephant_button"
+        android:layout_toEndOf="@+id/elephant_button"
         android:layout_toRightOf="@+id/elephant_button"
-        android:layout_toEndOf="@+id/elephant_button" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/pig"
         android:background="@null"
+        app:srcCompat="@drawable/lion" />
+
+    <ImageButton
         android:id="@+id/pig_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignTop="@+id/lion_button"
+        android:layout_toEndOf="@+id/lion_button"
         android:layout_toRightOf="@+id/lion_button"
-        android:layout_toEndOf="@+id/lion_button" />
+        android:background="@null"
+        app:srcCompat="@drawable/pig" />
 
     <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/monkey"
-        android:layout_alignTop="@+id/pig_button"
-        android:layout_alignRight="@+id/cow_button"
-        android:layout_alignEnd="@+id/cow_button"
         android:id="@+id/monkey_button"
-        android:background="@null"/>
-
-    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/snake"
+        android:layout_alignEnd="@+id/cow_button"
+        android:layout_alignRight="@+id/cow_button"
+        android:layout_alignTop="@+id/pig_button"
+        android:background="@null"
+        app:srcCompat="@drawable/monkey" />
+
+    <ImageButton
+        android:id="@+id/snake_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/elephant_button"
+        android:layout_marginTop="13dp"
         android:layout_toLeftOf="@+id/lion_button"
         android:layout_toStartOf="@+id/lion_button"
-        android:layout_marginTop="13dp"
-        android:id="@+id/snake_button"
-        android:background="@null"/>
+        android:background="@null"
+        app:srcCompat="@drawable/snake" />
 
     <ImageButton
+        android:id="@+id/duck_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/duck"
         android:layout_alignTop="@+id/snake_button"
         android:layout_toLeftOf="@+id/pig_button"
         android:layout_toStartOf="@+id/pig_button"
-        android:id="@+id/duck_button"
-        android:background="@null"/>
+        android:background="@null"
+        app:srcCompat="@drawable/duck" />
 
     <ImageButton
+        android:id="@+id/penguin_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/penguin"
         android:layout_alignTop="@+id/duck_button"
         android:layout_toLeftOf="@+id/monkey_button"
         android:layout_toStartOf="@+id/monkey_button"
-        android:id="@+id/penguin_button"
-        android:background="@null"/>
+        android:background="@null"
+        app:srcCompat="@drawable/penguin" />
 
     <ImageButton
+        android:id="@+id/fish_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/fish"
-        android:layout_alignTop="@+id/penguin_button"
-        android:layout_alignRight="@+id/monkey_button"
         android:layout_alignEnd="@+id/monkey_button"
-        android:id="@+id/fish_button"
-        android:background="@null"/>
+        android:layout_alignRight="@+id/monkey_button"
+        android:layout_alignTop="@+id/penguin_button"
+        android:background="@null"
+        app:srcCompat="@drawable/fish" />
 
     <Button
-        android:text="Text"
+        android:id="@+id/textButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/textButton"
-        android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/dog_button"
-        android:layout_alignStart="@+id/dog_button" />
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/dog_button"
+        android:layout_marginTop="16dp"
+        android:text="Text" />
 
 
     <VideoView
         android:id="@+id/videoView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:clickable="true"
-        android:layout_centerHorizontal="true"
         android:background="@null"
-        />
+        android:clickable="true" />
+
+    <Button
+        android:id="@+id/quizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz"
+        android:background="#7193ea"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

@@ -2,6 +2,7 @@ package com.example.brandon_e.myapplication;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.ActionBar;
@@ -66,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         // setting the media type
-
         Button textBtn = (Button) findViewById(R.id.textButton);
         textBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,10 +113,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // button to navigate to quiz interface
+        Button quizBtn = (Button) findViewById(R.id.quizButton);
+        quizBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, QuizMainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
-
-
+        //====================== Animal Buttons ======================== //
 
         // dog button
         ImageButton dogBtn = (ImageButton) findViewById(R.id.dog_button);
