@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
     }
     //======================================================================
 
+    public void resetButtons() {
+        findViewById(R.id.videoButton).setSelected(false);
+        findViewById(R.id.soundButton).setSelected(false);
+        findViewById(R.id.textButton).setSelected(false);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +77,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(TAG, "Text is the medium");
+
+                // Change button states
+                findViewById(R.id.videoButton).setSelected(false);
+                findViewById(R.id.soundButton).setSelected(false);
+                findViewById(R.id.textButton).setSelected(true);
 
                 // Toast gives a little pop up message would not be sufficiant for the applicaiton but could be used until we figure out a better pop up
                 Toast.makeText(getApplicationContext(), "Click on an Animal to learn the Name", Toast.LENGTH_SHORT)
@@ -89,6 +99,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i(TAG, "Video is the medium");
 
+                // Change button states
+                findViewById(R.id.videoButton).setSelected(true);
+                findViewById(R.id.soundButton).setSelected(false);
+                findViewById(R.id.textButton).setSelected(false);
+
                 // Toast gives a little pop up message would not be sufficiant for the applicaiton but could be used until we figure out a better pop up
                 Toast.makeText(getApplicationContext(), "Click on an Animal Watch a Video", Toast.LENGTH_SHORT)
                         .show();
@@ -104,6 +119,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i(TAG, "Sound is the medium");
 
+                // Change button states
+                findViewById(R.id.videoButton).setSelected(false);
+                findViewById(R.id.soundButton).setSelected(true);
+                findViewById(R.id.textButton).setSelected(false);
+
                 // Toast gives a little pop up message would not be sufficiant for the applicaiton but could be used until we figure out a better pop up
                 Toast.makeText(getApplicationContext(), "Click on an Animal to hear it", Toast.LENGTH_SHORT)
                         .show();
@@ -118,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
         quizBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetButtons();
                 Intent intent = new Intent(MainActivity.this, QuizMainActivity.class);
                 startActivity(intent);
             }
@@ -163,6 +184,8 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     mediumErrorMsg();
                 }
+
+                resetButtons();
             }
         });
 
@@ -195,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-                    mp = MediaPlayer.create(MainActivity.this, R.raw.cow_sound);
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.bear_sound);
                     mp.start();
                 }
                 else{
@@ -233,7 +256,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.horse_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -268,7 +292,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.bird_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -304,7 +329,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.cat_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -341,7 +367,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.chicken_sound);
+                    mp.start();
 
                 }
                 else{
@@ -379,7 +406,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.frog_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -454,7 +482,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.elephant_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -491,7 +520,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.lion_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -528,7 +558,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.pig_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -565,7 +596,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.monkey_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -602,7 +634,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.snake_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -637,7 +670,8 @@ public class MainActivity extends AppCompatActivity {
                     videoview.start();
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.duck_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -674,7 +708,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.penguin_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();
@@ -710,7 +745,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.fish_sound);
+                    mp.start();
                 }
                 else{
                     mediumErrorMsg();

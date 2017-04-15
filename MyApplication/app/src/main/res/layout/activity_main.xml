@@ -9,11 +9,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:clickable="true"
     tools:context="com.example.brandon_e.myapplication.MainActivity">
 
+    <Button
+        android:id="@+id/textButton"
+        android:background="@drawable/button_press"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/dog_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/dog_button"
+        android:layout_marginTop="16dp"
+        android:text="Text" />
 
     <Button
         android:id="@+id/videoButton"
+        android:background="@drawable/button_press"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textButton"
@@ -22,7 +34,9 @@
         android:layout_marginStart="17dp"
         android:layout_toEndOf="@+id/textButton"
         android:layout_toRightOf="@+id/textButton"
-        android:text="Video" />
+        android:text="Video"
+
+        />
 
     <Button
         android:id="@+id/soundButton"
@@ -32,7 +46,20 @@
         android:layout_alignBottom="@+id/videoButton"
         android:layout_toEndOf="@+id/horse_button"
         android:layout_toRightOf="@+id/horse_button"
+        android:background="@drawable/button_press"
         android:text="Sound" />
+
+
+
+    <Button
+        android:id="@+id/quizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz"
+        android:background="#7193ea"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 
 
     <ImageButton
@@ -201,15 +228,7 @@
         android:background="@null"
         app:srcCompat="@drawable/fish" />
 
-    <Button
-        android:id="@+id/textButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/dog_button"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/dog_button"
-        android:layout_marginTop="16dp"
-        android:text="Text" />
+
 
 
     <VideoView
@@ -218,15 +237,6 @@
         android:layout_height="0dp"
         android:background="@null"
         android:clickable="true" />
-
-    <Button
-        android:id="@+id/quizButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quiz"
-        android:background="#7193ea"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
