@@ -49,18 +49,19 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:id="@+id/button1"
-            android:textColor="#545353"
-            android:fontFamily="casual"
-            android:textSize="40sp"
-            android:textStyle="bold"
-            android:background="#f1e343"
-            android:layout_marginTop="50dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"/>
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:textColor="#545353"
+        android:fontFamily="casual"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:background="#f1e343"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"/>
+
 
         <Button
             android:layout_width="0dp"
@@ -70,12 +71,47 @@
             android:id="@+id/button2"
             android:textColor="#545353"
             android:fontFamily="casual"
-            android:textSize="40sp"
+            android:textSize="30sp"
+            android:background="#f1e343"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:background="#f1e343"
+            android:fontFamily="casual"
+            android:textColor="#545353"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+            <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:id="@+id/button4"
+            android:textColor="#545353"
+            android:fontFamily="casual"
+            android:textSize="30sp"
             android:background="#f1e343"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
 
+            </LinearLayout>
+
     </LinearLayout>
 
-</LinearLayout>

@@ -5,6 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4ABDE8"
+        android:fontFamily="casual"
+        android:padding="8dp"
+        android:text="    Home    "
+        android:textColor="#0a0909"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/retry"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,7 +48,6 @@
         android:text="You scored 8 out of 9"/>
 
     <Button
-        android:layout_below="@+id/outOf"
         android:id="@+id/retry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,6 +58,9 @@
         android:background="#f1e343"
         android:textSize="18sp"
         android:fontFamily="casual"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/outOf"
+        android:layout_alignLeft="@+id/homeButton"
+        android:layout_alignStart="@+id/homeButton" />
 
 </RelativeLayout>

@@ -29,18 +29,18 @@ public class AnimalQuiz {
     public static String[] trueFalseChoices = new String [] {
             "Bear",
             "Bird",
-            "Cat",
+            "Lion",
             "Chicken",
-            "Fish",
+            "Frog",
             "Lion",
-            "Lion",
-            "Pinguin",
+            "Cow",
+            "Penguin",
             "Pig",
-            "Monkey",
-            "Duck",
+            "Dog", // 10
+            "Chicken", // 11
             "Elephant",
             "Dog",
-            "Snake",
+            "Frog",
             "Cow",
             "Frog"
 
@@ -49,18 +49,18 @@ public class AnimalQuiz {
     public static boolean[] trueFalseAnswers = new boolean[]{
             true,
             true,
+            false,
+            true,
+            false,
+            false,
+            false,
             true,
             true,
+            false, // 10
+            false,
             true,
             true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
-            true,
+            false,
             true,
             true,
     };
@@ -70,23 +70,23 @@ public class AnimalQuiz {
 
     //////////////////////Multiple choice////////////////////////////////
 
-    private String multipleChoices [][] = {
-            {"Bear", "Snake"},
-            {"Bird", "Duck"},
-            {"Cat", "Fish"},
-            {"Chicken", "Dog"},
-            {"Fish", "Cow"},
-            {"Horse", "Cow"},
-            {"Lion", "Fish"},
-            {"Pinguin", "Bird"},
-            {"Pig", "Snake"},
-            {"Monkey", "Duck"},
-            {"Duck", "Fish"},
-            {"Elephent", "Dog"},
-            {"Dog", "Fish"},
-            {"Snake", "Cow"},
-            {"Cow", "Fish"},
-            {"Frog", "Bird"}
+    private String multipleChoices [][]= {
+            {"Snake", "Bear", "Duck", "Fish"},
+            {"Bird", "Duck", "Cat", "Pig"},
+            {"Cat", "Fish", "Duck", "Fish"},
+            {"Dog", "Duck", "Fish", "Chicken"},
+            {"Cow", "Snake", "Duck", "Fish"},
+            {"Horse", "Cow", "Elephant", "Dog"},
+            {"Dog", "Cat", "Lion", "Fish"},
+            {"Bird", "Penguin", "Duck", "Fish"},
+            {"Pig", "Snake", "Monkey", "Frog"},
+            {"Penguin", "Monkey", "Duck", "Dog"},
+            {"Duck", "Fish", "Snake", "Chicken"},
+            {"Dog", "Elephant", "Penguin", "Cow"},
+            {"Fish", "Dog", "Duck", "Monkey"},
+            {"Bear", "Cow", "Snake", "Bird"},
+            {"Cow", "Bear", "Duck", "Penguin"},
+            {"Bird", "Frog", "Pig", "Snake"}
 
     };
 
@@ -99,11 +99,11 @@ public class AnimalQuiz {
             "Fish",
             "Horse",
             "Lion",
-            "Pinguin",
+            "Penguin",
             "Pig",
             "Monkey",
             "Duck",
-            "Elephent",
+            "Elephant",
             "Dog",
             "Snake",
             "Cow",
@@ -116,20 +116,26 @@ public class AnimalQuiz {
     }
 
     public String getChoice1(int a) {
-        String choice0 = multipleChoices[a][0];
-        return choice0;
+        return multipleChoices[a][0];
     }
 
     public String getChoice2(int a) {
-        String choice1 = multipleChoices[a][1];
-        return choice1;
+        return multipleChoices[a][1];
+
+    }
+
+    public String getChoice3(int a) {
+        return multipleChoices[a][2];
+
+    }
+
+    public String getChoice4(int a) {
+        return multipleChoices[a][3];
     }
 
 
-
     public String getCorrectAnswer(int a) {
-        String answer = multipleChoiceAnswer[a];
-        return answer;
+        return multipleChoiceAnswer[a];
     }
 
 }

@@ -3,6 +3,8 @@ package com.example.brandon_e.myapplication;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.ActionBar;
@@ -15,8 +17,11 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import static com.example.brandon_e.myapplication.R.id.text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog alert = a_builder.create();
         alert.setTitle("Animal Text:");
         alert.show();
+        TextView textView = (TextView) alert.findViewById(android.R.id.message);
+        textView.setTextSize(40.f);
+        textView.setTextColor(Color.parseColor("#0B7CCC"));
+
     }
     //======================================================================
 
@@ -79,9 +88,9 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "Text is the medium");
 
                 // Change button states
+                findViewById(R.id.textButton).setSelected(true);
                 findViewById(R.id.videoButton).setSelected(false);
                 findViewById(R.id.soundButton).setSelected(false);
-                findViewById(R.id.textButton).setSelected(true);
 
                 // Toast gives a little pop up message would not be sufficiant for the applicaiton but could be used until we figure out a better pop up
                 Toast.makeText(getApplicationContext(), "Click on an Animal to learn the Name", Toast.LENGTH_SHORT)
@@ -120,8 +129,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.i(TAG, "Sound is the medium");
 
                 // Change button states
-                findViewById(R.id.videoButton).setSelected(false);
                 findViewById(R.id.soundButton).setSelected(true);
+                findViewById(R.id.videoButton).setSelected(false);
                 findViewById(R.id.textButton).setSelected(false);
 
                 // Toast gives a little pop up message would not be sufficiant for the applicaiton but could be used until we figure out a better pop up
@@ -178,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 else if(getMedia().equals("sound")) {
-                    mp = MediaPlayer.create(MainActivity.this, R.raw.cow_sound);
+                    mp = MediaPlayer.create(MainActivity.this, R.raw.dog_sound);
                     mp.start();
                 }
                 else{

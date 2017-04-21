@@ -5,7 +5,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="Click Me"
+        android:text="Multiple Choice"
         android:id="@+id/buttonTF"
         android:layout_marginTop="100dp"
         android:textStyle="bold"
@@ -19,7 +19,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="Click ME"
+        android:text="True / False"
         android:id="@+id/buttonMultiple"
         android:layout_marginTop="50dp"
         android:textStyle="bold"

@@ -16,6 +16,9 @@ public class MultipleChoiceActivity extends AppCompatActivity {
     private ImageView ImageView;
     private Button button1;
     private Button button2;
+    private Button button3;
+    private Button button4;
+
 
     private String Answer;
     private int Score = 0;
@@ -31,6 +34,8 @@ public class MultipleChoiceActivity extends AppCompatActivity {
         ImageView = (ImageView)findViewById(R.id.imageView);
         button1 = (Button)findViewById(R.id.button1);
         button2 = (Button)findViewById(R.id.button2);
+        button3 = (Button)findViewById(R.id.button3);
+        button4 = (Button)findViewById(R.id.button4);
 
         updateQuestion();
 
@@ -48,6 +53,23 @@ public class MultipleChoiceActivity extends AppCompatActivity {
                     buttonLogic(button2);
             }
         });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonLogic(button3);
+            }
+        });
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                buttonLogic(button4);
+            }
+        });
+
+
+
     }
 
     private void buttonLogic(Button button){
@@ -84,6 +106,8 @@ public class MultipleChoiceActivity extends AppCompatActivity {
         ImageView.setImageResource(quizDb.images[questionNumber]);
         button1.setText(quizDb.getChoice1(questionNumber));
         button2.setText(quizDb.getChoice2(questionNumber));
+        button3.setText(quizDb.getChoice3(questionNumber));
+        button4.setText(quizDb.getChoice4(questionNumber));
         Answer = quizDb.getCorrectAnswer(questionNumber);
         questionNumber++;
     }

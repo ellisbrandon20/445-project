@@ -56,7 +56,7 @@ public class QuizActivity extends AppCompatActivity {
 
     private void buttonLogic(Button button, boolean bool){
 
-        if(Answer = bool) {
+        if(Answer == bool) {
             Score++;
             updateScore(Score);
 
