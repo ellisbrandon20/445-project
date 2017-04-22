@@ -147,7 +147,6 @@ public class MainActivity extends AppCompatActivity {
         quizBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                resetButtons();
                 Intent intent = new Intent(MainActivity.this, QuizMainActivity.class);
                 startActivity(intent);
             }
@@ -194,7 +193,6 @@ public class MainActivity extends AppCompatActivity {
                     mediumErrorMsg();
                 }
 
-                resetButtons();
             }
         });
 

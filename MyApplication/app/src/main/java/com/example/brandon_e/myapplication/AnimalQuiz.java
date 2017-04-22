@@ -73,7 +73,7 @@ public class AnimalQuiz {
     private String multipleChoices [][]= {
             {"Snake", "Bear", "Duck", "Fish"},
             {"Bird", "Duck", "Cat", "Pig"},
-            {"Cat", "Fish", "Duck", "Fish"},
+            {"Cat", "Pig", "Duck", "Fish"},
             {"Dog", "Duck", "Fish", "Chicken"},
             {"Cow", "Snake", "Duck", "Fish"},
             {"Horse", "Cow", "Elephant", "Dog"},
